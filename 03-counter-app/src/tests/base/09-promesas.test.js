@@ -21,7 +21,7 @@ describe('Pruebas con promesas', () => {
         getHeroeByIdAsync(id)
         .catch(error =>{
             
-            expect(error).toBe('No se pudo encontrar el héroe!!!');
+            expect(error).toBe('No se pudo encontrar el héroe');
             done();
         });
 

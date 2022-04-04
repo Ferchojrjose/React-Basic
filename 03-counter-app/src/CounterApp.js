@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
 
-function CounterApp({ value }) {
+function CounterApp({ value  }) {
 
     const [counter, setCounter] = useState(value); //[valor, metodo]
 
