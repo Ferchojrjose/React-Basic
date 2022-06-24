@@ -1,3 +1,4 @@
+//Importar react 'rafc'
 import React, { useState } from 'react';
 import './counter.css';
 
@@ -20,12 +21,14 @@ export const CounterApp = () => {
 
             <button
                 className='btn btn-primary'
-                onClick={() => {
+                onClick={ 
+                    () => {
                     setstate({
                         ...state, //Importante, mantener los datos antiguos.
                         counter1: counter1 + 1
                     })
-                }}
+                    }
+                }
             >
                 +1
             </button>

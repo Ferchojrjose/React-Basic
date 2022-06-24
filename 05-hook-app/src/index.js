@@ -1,7 +1,10 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import { CounterApp } from './components/01-useState/CounterApp';
-import './index.css'
+import { createRoot } from 'react-dom/client';
 // import { HooksApp } from './HooksApp';
+// import { CounterApp } from './components/01-useState/CounterApp';
+import { WithCustomHook } from './components/01-useState/WithCustomHook';
+import './index.css'
 
-ReactDOM.render( <CounterApp />, document.getElementById('root'))
+const container = document.getElementById('root');
+const root = createRoot(container);
+root.render(<WithCustomHook />);
