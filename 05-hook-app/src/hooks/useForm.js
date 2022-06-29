@@ -2,7 +2,7 @@ import { useState } from "react";
 
 export const useForm = (initialForm = {}) => {
 
-    const [form, setform] = useState(initialForm);
+    const [form, setform] = useState(initialForm); //Valores del formulario
 
     /*
       Event es un objeto que tiene cada input o componente
@@ -20,8 +20,14 @@ export const useForm = (initialForm = {}) => {
         });
     }
 
+    //Resetear valores del formulario
+    const onResetForm = () => {
+        setform(initialForm);
+    }
+
     return {
         form,
-        onInputChange
+        onInputChange,
+        onResetForm
     }
 }
