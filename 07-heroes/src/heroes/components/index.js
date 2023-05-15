@@ -7,3 +7,4 @@ PARA EXPORTACIONES
 */
 
 export * from './Navbar';
+export * from './HeroeList';

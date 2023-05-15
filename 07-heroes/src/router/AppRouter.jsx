@@ -1,6 +1,6 @@
-import { Navigate, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 
-import { Navbar, HeroeRoutes } from "../heroes";
+import { HeroeRoutes } from "../heroes";
 import { Login } from "../auth";
 
 

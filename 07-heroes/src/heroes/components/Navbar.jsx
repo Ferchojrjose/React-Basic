@@ -1,15 +1,26 @@
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink, useNavigate } from 'react-router-dom';
 
 export const Navbar = () => {
+
+    //Custom Hook de react.
+    const navigate = useNavigate();
+
+    //Salir a la pagina de Login.
+    const onLogout = () => {
+        navigate('/login', {
+            replace: true
+        });
+    }
+
 
     /*
     ==================
     BARRA DE NAVEGACIÓN
     ===================
     */
-
     return (
-        <nav className="navbar navbar-expand-sm navbar-dark bg-dark p-2">
+
+        <nav className="navbar navbar-expand-sm navbar-dark bg-dark p-2" >
 
             <Link className="navbar-brand" to="/">
                 Asociaciones
@@ -52,6 +63,7 @@ export const Navbar = () => {
 
                     <button
                         className="nav-item nav-link btn"
+                        onClick={onLogout}
                     >
                         Logout
                     </button>
@@ -59,6 +71,6 @@ export const Navbar = () => {
                 </ul>
             </div>
 
-        </nav>
+        </nav >
     )
 }
