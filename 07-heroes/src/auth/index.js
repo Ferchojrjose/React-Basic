@@ -8,3 +8,4 @@ PARA EXPORTACIONES
 
 
 export * from './pages';
+export * from './context';
