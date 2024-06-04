@@ -6,8 +6,8 @@ import { HeroeCard } from "../components";
 
 export const Search = () => {
 
-  const navigate = useNavigate();
-  const location = useLocation();
+  const navigate = useNavigate(); //hook para navegar entre rutas.
+  const location = useLocation(); //hook para obtener la ubicación actual.
 
   const { q = "" } = queryString.parse(location.search);
   const heroes = getHeroeByName(q);
@@ -21,9 +21,9 @@ export const Search = () => {
 
 
   const onSearchSubmit = (event) => {
-    event.preventDefault();
+    event.preventDefault(); //evitar recargar la página.
     // if (searchText.trim().length <= 1) return;
-    navigate(`?q=${searchText}`);
+    navigate(`?q=${searchText}`); //navegar a la ruta con la query.
   };
 
 
@@ -49,7 +49,7 @@ export const Search = () => {
               onChange={onInputChange}
             />
 
-            <button className="btn btn-outline-primary mt-1">
+            <button className="btn btn-outline-primary mt-3">
               Search
             </button>
 
