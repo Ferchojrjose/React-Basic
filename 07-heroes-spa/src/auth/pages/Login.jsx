@@ -1,14 +1,22 @@
+import { useContext } from "react";
 import { useNavigate } from "react-router";
+import { AuthContext } from "../context/AuthContext";
 
 
 
 export const Login = () => {
 
-    const navigate = useNavigate(); // Hook de react-router-dom
+    const { login } = useContext(AuthContext); //* Hook de react para consumir el contexto de AuthContext
 
-    const handleLogin = () => {
+    const navigate = useNavigate(); //* Hook de react-router-dom
+
+
+    const handleLogin = () => { //* Función para hacer login
+
+        login('Fernando Serrano'); //* Llamamos a la función login del contexto
+
         navigate('/', {
-            replace: true, // Reemplaza la ruta actual
+            replace: true, //* Reemplaza la ruta actual
         });
     }
 
